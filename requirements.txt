@@ -1,2 +1,4 @@
 pandas==1.4.1
 jupyterlab==3.3.0
+xgboost==1.5.2
+scikit-learn==1.0.2

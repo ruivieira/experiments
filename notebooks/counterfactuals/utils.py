@@ -56,11 +56,12 @@ def get_result_schema():
        'CfNumBank2NatlTradesWHighUtilization', 'CfPercentTradesWBalance',
        'GoalValue', 'GoalName', 'GoalScore', 'method']
 
-def save_result(original, cf, score, method):
+def save_result(original, cf, score, method: str, model: str):
     result = {}
     result.update(original)
     result.update(cf)
     result.update(score)
     result.update({"method": method})
+    result.update({"model": model})
     result_df = pd.DataFrame.from_dict(result)
     return result_df
